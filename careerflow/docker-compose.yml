@@ -1,0 +1,11 @@
+services:
+  careerflow:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - careerflow-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  careerflow-data:
